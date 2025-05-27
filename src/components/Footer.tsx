@@ -1,6 +1,6 @@
 import React from 'react';
 import { Music, Mail, Phone } from 'lucide-react';
-import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
   return (
