@@ -3,7 +3,7 @@ import { ChevronDown } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section id="home" className="min-h-screen bg-gradient-to-b from-cream to-white flex items-center relative">
+    <section id="home" className="min-h-screen pt-20 bg-gradient-to-b from-cream to-white flex items-center relative">
       <div className="absolute inset-0 opacity-20" style={{ 
         backgroundImage: "url('https://images.pexels.com/photos/164743/pexels-photo-164743.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')",
         backgroundSize: 'cover',
