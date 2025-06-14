@@ -21,8 +21,8 @@ const Contact: React.FC = () => {
                   <Phone className="h-6 w-6 text-gold" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-medium text-navy mb-1">Phone</h4>
-                  <p className="text-navy/70"><a href="tel:2018883778">(201) 888-3778</a></p>
+                  <h4 className="text-lg font-medium text-navy mb-1">Please text Suzanne at</h4>
+                  <p className="text-navy/70">+1 (201) 888-3778</p>
                 </div>
               </div>
 
@@ -31,7 +31,7 @@ const Contact: React.FC = () => {
                   <Mail className="h-6 w-6 text-gold" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-medium text-navy mb-1">Email</h4>
+                  <h4 className="text-lg font-medium text-navy mb-1">or email her at</h4>
                   <p className="text-navy/70"><a href="mailto:skellow@gmail.com">skellow@gmail.com</a></p>
                 </div>
               </div>
@@ -43,10 +43,9 @@ const Contact: React.FC = () => {
                 <div>
                   <h4 className="text-lg font-medium text-navy mb-1">Home Service</h4>
                   <div className="space-y-2">
-                    <p className="text-navy/70">Suzanne will come to your home.</p>
-                    <p className="text-navy/70">She can provide a keyboard if you do not have a piano.</p>
+                    <p className="text-navy/70">Lessons will take place in your home, using your own piano or keyboard.</p>
                     <p className="text-navy/70">Serving the areas of:</p>
-                      <ul>
+                      <ul className="ml-6">
                         <li>Palm Beach</li>
                         <li>Jupiter</li>
                         <li>West Palm Beach</li>
@@ -55,20 +54,6 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className="mt-8 p-6 bg-navy/5 rounded-lg">
-              <h4 className="text-lg font-medium text-navy mb-4">Summer 2025 Lessons Schedule</h4>
-              <ul className="space-y-2">
-                <li className="flex justify-between">
-                  <span className="text-navy/70">Monday - Friday</span>
-                  <span className="text-navy font-medium">2:00 PM - 7:00 PM</span>
-                </li>
-                <li className="flex justify-between">
-                  <span className="text-navy/70">Saturday, Sunday, and Holidays</span>
-                  <span className="text-navy font-medium">10:00 AM - 4:00 PM</span>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
