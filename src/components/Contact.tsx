@@ -22,7 +22,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-medium text-navy mb-1">Please text Suzanne at</h4>
-                  <p className="text-navy/70">+1 (201) 888-3778</p>
+                  <p className="text-navy/70"><a href="sms:+12018883778" className="sms-link">💬201-888-3778</a></p>
                 </div>
               </div>
 
