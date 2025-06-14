@@ -1,6 +1,7 @@
 import React from 'react';
 import { Music, Mail, Phone } from 'lucide-react';
 import { FaFacebookF, FaInstagram } from 'react-icons/fa';
+import { GiMusicalNotes, GiGClef } from 'react-icons/gi';
 
 const Footer: React.FC = () => {
   return (
@@ -9,7 +10,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           <div>
             <div className="flex items-center mb-4">
-              <Music className="h-8 w-8 text-gold" />
+              <GiGClef className="h-8 w-8 text-gold" />
               <span className="ml-2 text-xl font-serif font-medium">Suzanne Kellow</span>
             </div>
             <p className="text-cream/70 mb-6">
@@ -25,7 +26,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          <div>
+          <div className="md:pl-12 lg:pl-20">
             <h3 className="text-lg font-medium mb-4">Contact Information</h3>
             <ul className="space-y-3">
               <li className="flex items-center">
@@ -39,7 +40,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          <div>
+          <div className="md:pl-16 lg:pl-28">
             <h3 className="text-lg font-medium mb-4">Quick Links</h3>
             <ul className="space-y-2">
               {['Home', 'About', 'Services', 'Gallery', 'Contact'].map((item) => (

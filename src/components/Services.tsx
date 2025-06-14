@@ -77,7 +77,7 @@ const Services: React.FC = () => {
               </div>
               <h4 className="text-xl font-serif font-medium text-navy mb-2">Duration & Frequency</h4>
               <p className="text-navy/70">
-                30, 45, or 60-minute lessons available weekly or bi-weekly to accommodate your child's schedule and attention span
+                30- or 60-minute lessons available weekly or bi-weekly to accommodate your child's schedule and attention span
               </p>
             </div>
 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Music } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import { GiGClef } from 'react-icons/gi';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +30,7 @@ const Navbar: React.FC = () => {
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <a href="#" className="flex items-center">
-                <Music className="h-8 w-8 text-gold" />
+                <GiGClef className="h-8 w-8 text-gold" />
                 <span className={`ml-2 text-xl font-serif font-medium ${isScrolled ? 'text-cream' : 'text-navy'}`}>
                   Suzanne Kellow
                 </span>

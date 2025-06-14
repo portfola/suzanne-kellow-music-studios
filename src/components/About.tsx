@@ -1,5 +1,6 @@
 import React from 'react';
 import { Music, Award, BookOpen } from 'lucide-react';
+import { GiMusicalNotes, GiGClef } from 'react-icons/gi';
 
 const About: React.FC = () => {
   return (
@@ -23,13 +24,13 @@ const About: React.FC = () => {
 
           <div className="lg:w-2/3">
             <p className="text-lg text-navy/80 mb-6 leading-relaxed">
-              With over 20 years of experience in music education, Suzanne Kellow brings her classroom expertise directly to your home. As a dedicated music educator specializing in piano and vocal instruction, she has nurtured young musical talent across Florida and New Jersey, creating engaging and inclusive learning environments for students from Pre-K through high school.
+              With over 30 years of experience in music education, Suzanne Kellow brings her classroom expertise directly to your home. As a dedicated music educator specializing in piano and vocal instruction, she has nurtured young musical talent across Florida and New Jersey, creating engaging and inclusive learning environments for students from Pre-K through high school.
             </p>
 
             <div className="space-y-6 mb-8">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1">
-                  <Music className="h-6 w-6 text-gold" />
+                  <GiGClef className="h-6 w-6 text-gold" />
                 </div>
                 <div className="ml-4">
                   <h3 className="text-xl font-serif font-medium text-navy mb-2">Experienced Piano & Voice Instructor</h3>
@@ -53,7 +54,7 @@ const About: React.FC = () => {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-xl font-serif font-medium text-navy mb-2">Qualified Professional</h3>
-                  <p className="text-navy/70">Holds a Master of Music Education from Columbia University Teachers College with music education certifications in Florida and New Jersey, plus ongoing training in choral techniques and vocal instruction methods.</p>
+                  <p className="text-navy/70">Holds a Master of Arts inMusic Education from Columbia University Teachers College with music education certifications in Florida and New Jersey, plus ongoing training in choral techniques and vocal instruction methods.</p>
                 </div>
               </div>
             </div>
