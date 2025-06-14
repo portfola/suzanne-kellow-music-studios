@@ -1,7 +1,7 @@
 import React from 'react';
-import { Music, Mail, Phone } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 import { FaFacebookF, FaInstagram } from 'react-icons/fa';
-import { GiMusicalNotes, GiGClef } from 'react-icons/gi';
+import { GiGClef } from 'react-icons/gi';
 
 const Footer: React.FC = () => {
   return (
