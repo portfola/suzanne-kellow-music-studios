@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-medium mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              {['Home', 'About', 'Services', 'Testimonials', 'Contact'].map((item) => (
+              {['Home', 'About', 'Services', 'Contact'].map((item) => (
                 <li key={item}>
                   <a
                     href={`#${item.toLowerCase()}`}

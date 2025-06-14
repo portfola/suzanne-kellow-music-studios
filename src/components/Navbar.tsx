@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navItems = ['Home', 'About', 'Services', 'Testimonials', 'Contact'];
+  const navItems = ['Home', 'About', 'Services', 'Contact'];
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${
