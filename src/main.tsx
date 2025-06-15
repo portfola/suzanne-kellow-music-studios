@@ -4,6 +4,10 @@ import App from './App.tsx';
 import './index.css';
 import { PostHogProvider } from 'posthog-js/react'
 
+// Debug environment variables
+console.log('PostHog Host:', import.meta.env.VITE_PUBLIC_POSTHOG_HOST);
+console.log('PostHog Key:', import.meta.env.VITE_PUBLIC_POSTHOG_KEY);
+
 const options = {
   api_host: import.meta.env.VITE_PUBLIC_POSTHOG_HOST
 }
