@@ -123,7 +123,7 @@ const Services: React.FC = () => {
             </div>
 
             <div className="text-center p-6 bg-cream rounded-lg md:col-span-2">
-              <h4 className="text-xl font-serif font-medium text-navy mb-2">Summer Jump-Start Package</h4>
+              <h4 className="text-xl font-serif font-medium text-navy mb-2">Starter Package</h4>
               <p className="text-3xl font-bold text-gold mb-2">$290</p>
               <p className="text-navy/70">6 lessons of 30 minutes each plus a new lesson book</p>
             </div>
