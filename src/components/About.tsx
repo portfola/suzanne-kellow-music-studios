@@ -24,7 +24,7 @@ const About: React.FC = () => {
 
           <div className="lg:w-2/3">
             <p className="text-lg text-navy/80 mb-6 leading-relaxed">
-              With over 30 years of experience in music education, Suzanne Kellow brings her classroom expertise directly to your home. As a dedicated music educator specializing in piano and vocal instruction, she has nurtured young musical talent across Florida and New Jersey, creating engaging and inclusive learning environments for students from Pre-K through high school.
+              With over 30 years of experience in music education, Suzanne Kellow brings her classroom expertise directly to your home. A dedicated music educator specializing in piano and vocal instruction, she has nurtured young musical talent across Florida and New Jersey, creating engaging and inclusive learning environments for students from Pre-K through high school.
             </p>
 
             <div className="space-y-6 mb-8">
@@ -44,7 +44,7 @@ const About: React.FC = () => {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-xl font-serif font-medium text-navy mb-2">Proven Music Educator</h3>
-                  <p className="text-navy/70">A music teacher at The Weiss School in Palm Beach Gardens, Suzanne formerly taught at Saint Luke's Catholic School and South Olive Elementary, with a track record of preparing students for performances and fostering a genuine love for music in young learners.</p>
+                  <p className="text-navy/70">Suzanne Kellow teaches music at The Weiss School in Palm Beach Gardens. She has previously taught at Saint Luke's Catholic School, South Olive Elementary, and many other schools in a distinguished career spent preparing her students for the rigors of performance and fostering among them a deep love and appreciation for music.</p>
                 </div>
               </div>
 
@@ -54,7 +54,7 @@ const About: React.FC = () => {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-xl font-serif font-medium text-navy mb-2">Qualified Professional</h3>
-                  <p className="text-navy/70">Holds a Master of Arts inMusic Education from Columbia University Teachers College with music education certifications in Florida and New Jersey, plus ongoing training in choral techniques and vocal instruction methods.</p>
+                  <p className="text-navy/70">Master of Arts in Music Education from Columbia University Teachers College with music education certifications in Florida and New Jersey, plus ongoing training in choral techniques and vocal instruction methods. Suzanne has taught hundreds of private students - in their homes, and in her own - over the course of her decades-long music career.</p>
                 </div>
               </div>
             </div>
