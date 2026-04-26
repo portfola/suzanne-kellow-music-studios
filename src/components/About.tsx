@@ -44,7 +44,7 @@ const About: React.FC = () => {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-xl font-serif font-medium text-navy mb-2">Proven Music Educator</h3>
-                  <p className="text-navy/70">Former music teacher at Saint Luke's Catholic School and South Olive Elementary, with a track record of preparing students for performances and fostering a genuine love for music in young learners.</p>
+                  <p className="text-navy/70">A music teacher at The Weiss School in Palm Beach Gardens, Suzanne formerly taught at Saint Luke's Catholic School and South Olive Elementary, with a track record of preparing students for performances and fostering a genuine love for music in young learners.</p>
                 </div>
               </div>
 
