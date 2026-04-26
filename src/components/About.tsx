@@ -1,6 +1,6 @@
 import React from 'react';
-import { Music, Award, BookOpen } from 'lucide-react';
-import { GiMusicalNotes, GiGClef } from 'react-icons/gi';
+import { Award, BookOpen } from 'lucide-react';
+import { GiGClef } from 'react-icons/gi';
 
 const About: React.FC = () => {
   return (

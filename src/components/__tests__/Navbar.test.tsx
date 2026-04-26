@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, vi } from 'vitest';
+import { describe, it, expect, beforeEach } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Navbar from '../Navbar';
@@ -15,11 +15,8 @@ describe('Navbar', () => {
   });
 
   it('renders all navigation items on desktop', () => {
-    const { container } = render(<Navbar />);
+    render(<Navbar />);
     const navItems = ['Home', 'About', 'Services', 'Gallery', 'Contact'];
-
-    // Find desktop nav items (the ones with class containing text-navy/cream hover:text-gold)
-    const desktopNav = container.querySelector('.hidden.md\\:block');
 
     navItems.forEach(item => {
       const items = screen.getAllByText(item);
@@ -82,7 +79,7 @@ describe('Navbar', () => {
   });
 
   it('has a toggle button for mobile menu', () => {
-    const { container } = render(<Navbar />);
+    render(<Navbar />);
     const nav = screen.getByText('Suzanne Kellow').closest('nav');
     // Find button inside the first md:hidden container (the toggle button)
     const toggleButton = nav?.querySelector('.md\\:hidden button');
@@ -91,12 +88,8 @@ describe('Navbar', () => {
 
   it('toggles menu visibility when toggle button clicked', async () => {
     const user = userEvent.setup();
-    const { container } = render(<Navbar />);
+    render(<Navbar />);
     const nav = screen.getByText('Suzanne Kellow').closest('nav');
-
-    // Find the mobile menu links container (has bg-navy class)
-    const menuLinks = nav?.querySelector('.bg-navy');
-    const menuContainer = menuLinks?.parentElement;
 
     // Initially menu should be hidden (unless small viewport makes it visible differently)
     // Get the toggle button
