@@ -77,7 +77,7 @@ const Services: React.FC = () => {
               </div>
               <h4 className="text-xl font-serif font-medium text-navy mb-2">Duration & Frequency</h4>
               <p className="text-navy/70">
-                30- or 60-minute lessons available weekly or bi-weekly to accommodate your child's schedule and attention span
+                30-, 45-, or 60-minute lessons available weekly or bi-weekly to accommodate your child's schedule and attention span
               </p>
             </div>
 
@@ -109,23 +109,23 @@ const Services: React.FC = () => {
             <div className="w-16 h-1 bg-gold mx-auto"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center p-6 bg-cream rounded-lg">
               <h4 className="text-xl font-serif font-medium text-navy mb-2">30-Minute Lesson</h4>
-              <p className="text-3xl font-bold text-gold mb-2">$50</p>
+              <p className="text-3xl font-bold text-gold mb-2">$55</p>
               <p className="text-navy/70">Perfect for beginners and younger students</p>
             </div>
 
             <div className="text-center p-6 bg-cream rounded-lg">
-              <h4 className="text-xl font-serif font-medium text-navy mb-2">1-Hour Lesson</h4>
-              <p className="text-3xl font-bold text-gold mb-2">$90</p>
-              <p className="text-navy/70">Ideal for intermediate and advanced students</p>
+              <h4 className="text-xl font-serif font-medium text-navy mb-2">45-Minute Lesson</h4>
+              <p className="text-3xl font-bold text-gold mb-2">$75</p>
+              <p className="text-navy/70">Great for developing students ready for more</p>
             </div>
 
-            <div className="text-center p-6 bg-cream rounded-lg md:col-span-2">
-              <h4 className="text-xl font-serif font-medium text-navy mb-2">Starter Package</h4>
-              <p className="text-3xl font-bold text-gold mb-2">$290</p>
-              <p className="text-navy/70">6 lessons of 30 minutes each plus a new lesson book</p>
+            <div className="text-center p-6 bg-cream rounded-lg">
+              <h4 className="text-xl font-serif font-medium text-navy mb-2">1-Hour Lesson</h4>
+              <p className="text-3xl font-bold text-gold mb-2">$100</p>
+              <p className="text-navy/70">Ideal for intermediate and advanced students</p>
             </div>
           </div>
         </div>
