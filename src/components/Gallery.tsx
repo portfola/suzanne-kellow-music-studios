@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, useCallback, KeyboardEvent as ReactKeyboardEvent } from 'react';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 
 interface MediaItem {
@@ -46,22 +46,53 @@ const Gallery: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showFullscreen, setShowFullscreen] = useState(false);
   const [animationKey, setAnimationKey] = useState(0);
+  const imageButtonRef = useRef<HTMLButtonElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     setAnimationKey(prev => prev + 1);
   }, [currentIndex]);
 
-  const handlePrevious = () => {
-    setCurrentIndex((prevIndex) => 
+  const handlePrevious = useCallback(() => {
+    setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? mediaItems.length - 1 : prevIndex - 1
     );
-  };
+  }, []);
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % mediaItems.length);
-  };
+  }, []);
 
   const currentItem = mediaItems[currentIndex];
+
+  const closeFullscreen = useCallback(() => {
+    setShowFullscreen(false);
+    imageButtonRef.current?.focus();
+  }, []);
+
+  useEffect(() => {
+    if (showFullscreen) {
+      closeButtonRef.current?.focus();
+    }
+  }, [showFullscreen]);
+
+  const handleCarouselKeyDown = (e: ReactKeyboardEvent) => {
+    if (e.key === 'ArrowLeft') {
+      handlePrevious();
+    } else if (e.key === 'ArrowRight') {
+      handleNext();
+    }
+  };
+
+  const handleModalKeyDown = (e: ReactKeyboardEvent) => {
+    if (e.key === 'Escape') {
+      closeFullscreen();
+    } else if (e.key === 'ArrowLeft') {
+      handlePrevious();
+    } else if (e.key === 'ArrowRight') {
+      handleNext();
+    }
+  };
 
   return (
     <>
@@ -73,6 +104,11 @@ const Gallery: React.FC = () => {
             }
             to {
               transform: scale(1.05);
+            }
+          }
+          @media (prefers-reduced-motion: reduce) {
+            .gallery-media {
+              animation: none !important;
             }
           }
         `}
@@ -88,18 +124,32 @@ const Gallery: React.FC = () => {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <div className="relative aspect-video bg-navy/5 rounded-lg overflow-hidden">
+            <div
+              className="relative aspect-video bg-navy/5 rounded-lg overflow-hidden"
+              role="group"
+              aria-roledescription="carousel"
+              aria-label="Media gallery"
+              tabIndex={0}
+              onKeyDown={handleCarouselKeyDown}
+            >
               {currentItem.type === 'image' ? (
-                <img
-                  key={animationKey}
-                  src={currentItem.src}
-                  alt={currentItem.alt}
-                  className="w-full h-full object-cover"
+                <button
+                  ref={imageButtonRef}
+                  type="button"
                   onClick={() => setShowFullscreen(true)}
-                  style={{
-                    animation: 'slowZoom 8s ease-in forwards'
-                  }}
-                />
+                  className="block w-full h-full"
+                  aria-label="View image fullscreen"
+                >
+                  <img
+                    key={animationKey}
+                    src={currentItem.src}
+                    alt={currentItem.alt}
+                    className="gallery-media w-full h-full object-cover"
+                    style={{
+                      animation: 'slowZoom 8s ease-in forwards'
+                    }}
+                  />
+                </button>
               ) : (
                 <video
                   src={currentItem.src}
@@ -129,9 +179,16 @@ const Gallery: React.FC = () => {
 
           {/* Fullscreen Modal */}
           {showFullscreen && currentItem.type === 'image' && (
-            <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
+            <div
+              className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+              role="dialog"
+              aria-modal="true"
+              aria-label="Fullscreen image viewer"
+              onKeyDown={handleModalKeyDown}
+            >
               <button
-                onClick={() => setShowFullscreen(false)}
+                ref={closeButtonRef}
+                onClick={closeFullscreen}
                 className="absolute top-4 right-4 text-white hover:text-gold"
                 aria-label="Close"
               >
@@ -141,7 +198,7 @@ const Gallery: React.FC = () => {
                 key={animationKey}
                 src={currentItem.src}
                 alt={currentItem.alt}
-                className="max-w-full max-h-[90vh] object-contain"
+                className="gallery-media max-w-full max-h-[90vh] object-contain"
                 style={{
                   animation: 'slowZoom 8s ease-in forwards'
                 }}
