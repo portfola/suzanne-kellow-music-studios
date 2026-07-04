@@ -57,6 +57,8 @@ const Navbar: React.FC = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
+              aria-label={isOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={isOpen}
               className={`inline-flex items-center justify-center p-2 rounded-md ${
                 isScrolled ? 'text-cream hover:text-gold' : 'text-navy hover:text-gold'
               } focus:outline-none`}
