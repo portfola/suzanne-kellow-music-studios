@@ -17,10 +17,10 @@ const Footer: React.FC = () => {
               Cultivating musical excellence in young pianists and vocalists throughout Palm Beach County since 2018.
             </p>
             <div className="flex space-x-4">
-              <a target="_blank" href="https://www.facebook.com/suzanne.kellow.3" className="text-cream/70 hover:text-gold transition duration-300">
+              <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/suzanne.kellow.3" className="text-cream/70 hover:text-gold transition duration-300" aria-label="Suzanne Kellow on Facebook">
                 <FaFacebookF className="h-5 w-5" />
               </a>
-              <a target="_blank" href="https://www.instagram.com/suzannekellow/" className="text-cream/70 hover:text-gold transition duration-300">
+              <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/suzannekellow/" className="text-cream/70 hover:text-gold transition duration-300" aria-label="Suzanne Kellow on Instagram">
                 <FaInstagram className="h-5 w-5" />
               </a>
             </div>
